@@ -366,13 +366,13 @@ export class MahjongBoardComponent implements AfterViewInit, OnDestroy {
       strokeAlpha = 0.4;
       alpha = 0.55;
     } else if (state === 'hint') {
-      stroke = 0x2563eb;
+      stroke = 0xfacc15;
       strokeAlpha = 1;
       strokeWidth = 3;
       lift = -3;
       scale = 1.04;
-      overlayColor = 0x93c5fd;
-      overlayAlpha = 0.22;
+      overlayColor = 0xfef08a;
+      overlayAlpha = 0.35;
     } else if (state === 'error') {
       stroke = 0xdc2626;
       strokeAlpha = 1;
