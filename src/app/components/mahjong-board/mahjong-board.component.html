@@ -1,0 +1,53 @@
+<main class="page">
+  <header class="top-bar">
+    <div class="brand">
+      <span class="brand-mark">MJ</span>
+      <span class="brand-title">Mahjong</span>
+    </div>
+    <nav class="top-actions">
+      <button class="ghost" type="button" (click)="newGame()">New Game</button>
+      <button class="ghost" type="button" (click)="shuffleTiles()">Shuffle</button>
+      <button class="ghost" type="button" (click)="suggestMove()">Hint</button>
+    </nav>
+  </header>
+
+  <section class="stage">
+    <div class="stage-panel">
+      <div class="stage-header">
+        <h1>Simple Mahjong Game</h1>
+      </div>
+      <div
+        id="pixi-root"
+        #pixiRoot
+        class="pixi-host"
+        aria-label="Mahjong game canvas"
+      ></div>
+    </div>
+
+    <aside class="info">
+      <h2>How It Works</h2>
+      <ul>
+        <li>Use PixiJS to render tiles into the canvas host.</li>
+        <li>Track state in Angular services and signals.</li>
+        <li>Wire controls above to shuffle or restart.</li>
+      </ul>
+      <div class="info-card">
+        <h3>Next Step</h3>
+        <p>Add a PixiJS scene and push tiles into a layout.</p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<section class="cookie-banner" [class.is-hidden]="hasConsent()">
+  <p>
+    This site uses cookies to store your game preferences and improve the
+    experience.
+  </p>
+  <div class="cookie-actions">
+    <button class="ghost" type="button">Learn more</button>
+    <button class="primary" type="button" (click)="acceptCookies()">
+      Ok, got it
+    </button>
+  </div>
+</section>
